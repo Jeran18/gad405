@@ -22,7 +22,7 @@ function draw() {
   if (mouseIsPressed == true) {
     angle += 5;
 
-    var val = cos(radians(angle)) * 30.0;
+    var val = cos(radians(angle)) * 20.0;
     for (var a = 0; a < 360; a += 75) {
       var xoff = cos(radians(a)) * val;
       var yoff = sin(radians(a)) * val;
