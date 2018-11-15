@@ -2,39 +2,37 @@
 //00_Template
 //The purpose of this sketch is to provide a basic template
 //for P5.js projects
-var  angle = 0;
+
 //Initialization function
 function setup() {
   //Print a message to the console - to view using Chrome:
   //View > Developer > Developer Tools > Console
-
-  createCanvas(710,500);
-  //Set a background color
-  background(200, 0, 255);
-  fill(0,255,0);
+console.log("Initialization: OK")
+createCanvas(500,500);
+noStroke();
 }
 
-//Rendering function
+//rendering function
 function draw() {
 
-    // Draw only when mouse is pressed
-    //when mouse is pressed draws
-  if (mouseIsPressed == true) {
-    angle += 5;
+var M = map(mouseX, 0, width, 0 , 255);
+var X = map(mouseY, 0, height, 0 ,255);
+var Y = map(mouseX, 0, width, 255, 0);
+var Y2 = map(mouseY, 0, height, 255, 0);
+background(0,0,0);
 
-    var val = cos(radians(angle)) * 20.0;
-    for (var a = 0; a < 360; a += 75) {
-      var xoff = cos(radians(a)) * val;
-      var yoff = sin(radians(a)) * val;
-      fill(random(255),random(255) ,random(255));
-      ellipse(mouseX + xoff, mouseY + yoff, val, val);
-    }
-    //
-    fill(255,0,0);
-    ellipse(mouseX, mouseY, 2, 3)
-  }
+fill(255, 100, 100, M);
+rect(0, 0, 250, 250);
+
+fill(100, 100, 255, X);
+rect(250, 0, 250, 250);
+
+fill(100, 255, 100, Y);
+rect(0, 250, 250, 250);
+
+fill(255, 255, 100, Y2);
+rect(250, 250, 250, 250);
+
   //Print a message to the console - to view using Chrome:
   //View > Developer > Developer Tools > Console
-
-
 }
