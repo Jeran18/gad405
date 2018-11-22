@@ -32,6 +32,7 @@ function draw() {
 //360 is the circumference of a circle
 //var is variable, my variable is input, which is equal to value
     var input = cos(radians(angle)) * 40.0;
+    //this is shown as a loop effect
     for (var a = 0; a < 360; a += 75) {
 //cos and sin are maths
 //radians is a unit of measurement
@@ -50,10 +51,14 @@ function draw() {
   ellipse(mouseX, mouseY, 2, 3)
   }
 }
+//this function means that when keys 1-4 are keyPressed
+//the colour of the circles begin to change in the 255 spectrum
+//however it did not become as random as i had intended
+//yet it still runs perfectly fine
 function keyPressed(){
   if (key == "1") r = 255; g = 0; b = 0;
   if (key == "2") r = 0; g = 255; b = 0;
-  if (key == "3") r = 0; g = 0; b = 200;
+  if (key == "3") r = 0; g = 0; b = 255;
   if (key == "4") r = random(255); g = random(255); b = random(255);
 }
     //Print a message to the console - to view using Chrome:
