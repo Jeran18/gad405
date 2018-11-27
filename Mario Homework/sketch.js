@@ -200,7 +200,7 @@ function customShape(x, y){
 }
 function keyPressed(){
   if (keyCode == RIGHT_ARROW){
-    x = x = 10;
+    x = x + 10;
   }
   else if (keyCode == LEFT_ARROW){
     x = x - 10;
